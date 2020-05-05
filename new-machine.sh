@@ -53,7 +53,19 @@ echo ''
 
 git clone https://github.com/BloodHoundAD/BloodHound.git || echo -e '\e[0;31m ALREADY EXISTS \e[0m'
 
+echo ''
+echo -e '\e[0;34m Getting python2/3-pip \e[0m'
+echo ''
 
+apt install python-pip-whl || echo -e '\e[0;31m ALREADY EXISTS \e[0m'
+echo ''
+apt install python3-pip || echo -e '\e[0;31m ALREADY EXISTS \e[0m'
+
+echo ''
+echo -e '\e[0;34m Getting Sublime \e[0m'
+echo ''
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -; echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list; sudo apt-get install sublime-text || echo -e '\e[0;31m ALREADY EXISTS \e[0m'
 
 
 
